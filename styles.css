@@ -1,0 +1,155 @@
+:root {
+  --primary-dark-cyan: hsl(158, 36%, 37%);
+  --primary-cream: hsl(30, 38%, 92%);
+  --neutral-very-dark-blue: hsl(212, 21%, 14%);
+  --neutral-dark-grayish-blue: hsl(228, 12%, 48%);
+  --neutral-white: hsl(0, 0%, 100%);
+  --active: hsl(156, 42%, 18%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-weight: 400;
+  background-color: var(--primary-cream);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 55rem;
+  border-radius: 9px;
+  background-color: var(--neutral-white);
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.img-desktop {
+  max-width: 100%;
+}
+
+.img-mobile {
+  display: none;
+}
+
+.content-box {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3.2rem;
+}
+
+.content-title {
+  color: var(--neutral-dark-grayish-blue);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+}
+
+.content-heading {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 0.95;
+}
+
+.content-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.8;
+  color: var(--neutral-dark-grayish-blue);
+}
+
+.content-price-box {
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.main-price {
+  font-family: 'Fraunces', serif;
+  color: var(--primary-dark-cyan);
+  font-size: 2.8rem;
+  margin-right: 1.2rem;
+}
+
+.second-price {
+  color: var(--neutral-dark-grayish-blue);
+  font-size: 1.1rem;
+  text-decoration: line-through;
+}
+
+.btn {
+  border: none;
+  display: flex;
+  gap: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  background-color: var(--primary-dark-cyan);
+  color: var(--neutral-white);
+  padding: 1.2rem 4.8rem;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--active);
+}
+
+.cart-icon {
+  display: block;
+}
+
+@media (max-width: 32em){
+  body {
+    align-items: stretch;
+  }
+
+  .container {
+    margin: 1.4rem 1.4rem;
+    display: flex;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .img-desktop {
+    display: none;
+  }
+
+  .img-mobile {
+    display: inline;
+    max-width: 100%;
+  }
+
+  .content-box {
+    padding: 2rem;
+    gap: 1.8rem;
+  }
+
+  .content-text {
+    display: inline-block;
+    margin-right: 4.4rem;
+  }
+
+  .btn {
+    justify-content: center;
+  }
+}
